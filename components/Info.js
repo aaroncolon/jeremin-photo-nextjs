@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default class Info extends React.Component {
   componentDidMount() {
     $('.open-popup').magnificPopup({

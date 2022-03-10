@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default class JpRoyalSlider extends React.Component {
   constructor(props) {
     super(props)
@@ -6,7 +8,7 @@ export default class JpRoyalSlider extends React.Component {
 
   componentDidMount() {
     this.$el = $(this.ref.current)
-    let slides = this.generateSlides() 
+    let slides = this.generateSlides()
 
     // init RoyalSlider
     this.$el.royalSlider({
@@ -30,7 +32,7 @@ export default class JpRoyalSlider extends React.Component {
     }
     return true
   }
-   
+
   componentDidUpdate(prevProps, prevState) {
     let slides = this.generateSlides()
     this.$el.royalSlider('destroy').empty().royalSlider({
@@ -50,7 +52,7 @@ export default class JpRoyalSlider extends React.Component {
 
   componentWillUnmount() {
     if (this.$el && this.$el.data('royalSlider')) {
-      this.$el.data('royalSlider').destroy()  
+      this.$el.data('royalSlider').destroy()
     }
   }
 

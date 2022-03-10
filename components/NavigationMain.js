@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 
 export default class NavigationMain extends React.Component {
@@ -15,7 +16,7 @@ export default class NavigationMain extends React.Component {
       <nav className="site-navigation">
         <ul className="menu">
           <li>
-            <a href="#info" className="open-popup" onClick={this.handleClick} >Info</a>
+            <a href="#info" className="open-popup" onClick={this.handleClick}>Info</a>
           </li>
           <li>
             <Link href="/[...slug]" as="/architecture">
@@ -31,5 +32,5 @@ export default class NavigationMain extends React.Component {
       </nav>
     )
   }
-  
+
 }
